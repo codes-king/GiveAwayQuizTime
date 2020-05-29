@@ -277,7 +277,7 @@ public void checkAnswer(boolean userAnswer)
             AlertDialog.Builder builder = new AlertDialog.Builder(
                     MainActivity.this);
             builder.setCancelable(false);
-            builder.setTitle("Your Score: "+score);
+            builder.setTitle("You Scored: "+score+" /15");
             builder.setMessage("Want to Play Again?");
             builder.setNegativeButton("NO",
                     new DialogInterface.OnClickListener() {
