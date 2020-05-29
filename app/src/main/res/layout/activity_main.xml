@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@drawable/splash_gradient"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/layout_score"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/wrong"
+                  android:layout_weight="1"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Wrong"
+                    android:background="@drawable/falsebuttonshape"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="start"/>
+
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level-0"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="start"/>
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/truebuttonshape"
+                    android:text="Score"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+                <com.smarteist.autoimageslider.SliderLayout
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/imageslider"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_height="200dp">
+
+                </com.smarteist.autoimageslider.SliderLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+
+                    <Button
+                        android:id="@+id/start_game"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Start Quiz"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/start_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:visibility="gone"
+                        android:layout_width="330dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+
+
+                            <TextView
+                                android:id="@+id/answer_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:text="@string/my_test_question"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/truefalse"
+                    android:layout_marginTop="35dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/true_button"
+                        android:text="@string/true_text"
+                        android:background="@drawable/truebuttonshape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/correct"
+                        android:paddingRight="10dp"
+                        android:layout_marginRight="20dp"/>
+                    <Button
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/false_button"
+                        android:text="@string/false_text"
+                        android:drawableRight="@drawable/wrong"
+                        android:paddingRight="10dp"
+                        android:textColor="#ECECEC"
+                        android:background="@drawable/falsebuttonshape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/next_previous"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="95dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start"
+                        android:contentDescription="previousQuestion"
+                        android:src="@drawable/kk" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/restart"
+                        android:layout_weight="1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start"
+                        android:contentDescription="previousQuestion"
+                        android:src="@drawable/restart_trans" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/next"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+
+                        android:contentDescription="nextQuestion"
+                        android:src="@drawable/nextques" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">QuizTime</string>
+    <string name="my_test_question">My test Question</string>
+    <string name="true_text">true</string>
+    <string name="false_text">False</string>
+    <string name="correct_answer">That\'s correct</string>
+    <string name="wrong_answer">That\'s incorrect</string>
+
+    <string name="question_one"><b>Q.1 Android</b> is Linux based operating system??</string>
+    <string name="question_two"><b>Q.2 </b>Android is initially developed by Open Handset Alliance?</string>
+    <string name="question_three"><b>Q.3 </b>Every Android application must have manifest file in root directory?</string>
+    <string name="question_four"><b>Q.4 </b>XML layout file is used to design User-Interface Screen?</string>
+    <string name="question_five"><b>Q.5 </b>android: maxSdk Version in AndroidManifest.xml is not recommended?</string>
+    <string name="question_six"><b>Q.6 </b>View is the basic building block of Android user-interface?</string>
+    <string name="question_seven"><b>Q.7 </b>Android Document is the part of Android Architecture?</string>
+    <string name="question_eight"><b>Q.8 </b>ADB stands for Android Destroy Bridge?</string>
+    <string name="question_nine"><b>Q.9 </b>ANR stands for Application Not Responding?</string>
+    <string name="question_ten"><b>Q.10 </b>Fragment is not the part of Activity?</string>
+    <string name="question_eleven"><b>Q.11 </b>Java can\'t be used for App Development? </string>
+    <string name="question_twelve"><b>Q.12 </b>Python is used for App Development?</string>
+    <string name="question_thirteen"><b>Q.13 </b><b>Real-Time Database</b> is not supported by Firebase ?</string>
+    <string name="question_fourteen"><b>Q.14 </b><b>Object</b> is the Super class of all classes in Java?</string>
+    <string name="question_fifteen"><b>Q.15 </b>Java is pure Object-Oriented Language? </string>
+
+</resources>
